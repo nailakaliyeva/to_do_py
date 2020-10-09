@@ -6,16 +6,18 @@ def get_todos():
     return todos
 
 def add_one_task(title):
-    # your code here
-    pass
+    todos.append(title)
+    print("1 task added")
+    print_list()
+    
 
 def print_list():
     global todos
-    pass
+    print(todos)
 
 def delete_task(number_to_delete):
-    # your code here
-    pass
+    del todos[int(number_to_delete)]
+    print_list()
 
 def save_todos():
     # your code here
