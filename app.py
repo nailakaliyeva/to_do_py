@@ -22,13 +22,13 @@ def delete_task(number_to_delete):
 def save_todos():
     with open("todos_file.csv", "w+" ) as f:
         f.write(",".join(todos))
-        jr = f.readline()
-    print(jr)
+    print("New task is saved")
 
     
 def load_todos():
-    # your code here
-    pass
+    with open("todos_file.csv", "r" ) as f:
+        jr = f.readline()
+    print(jr)
 
 # Below this code will only run if the entry file running was app.py
 if __name__ == '__main__':
