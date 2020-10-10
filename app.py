@@ -1,4 +1,4 @@
-todos = []
+from todos_file import todos
 stop = False
 
 def get_todos():
@@ -20,8 +20,9 @@ def delete_task(number_to_delete):
     print_list()
 
 def save_todos():
-    # your code here
-    pass
+    with open("todos_file.py", "r+" ) as f:
+        f.write("".join(todos))
+    print(todos)
 
     
 def load_todos():
